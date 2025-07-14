@@ -82,6 +82,7 @@
 .prices{
     margin-top: 12rem;
     text-align: center;
+    
 
     & h3:first-child{
         color: var(--text-title);
@@ -95,7 +96,7 @@
         justify-content: center;
         align-items: end;
         color: var(--text-body);
-
+        
         &:has(.mensal:hover) .semestral,
         :has(.anual:hover) .semestral {
             background-color: var(--shape-base);
@@ -113,6 +114,7 @@
 
             transition: 0.3s ease-in-out;
             margin-bottom: 1px;
+
 
             &:hover{
                 background-color: var(--shape-hover);

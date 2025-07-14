@@ -8,6 +8,11 @@ footer {
         max-width: 70rem;
         margin: 0 auto;
 
+        padding: 10.5rem 5rem;
+
+        display: flex;
+        justify-content: space-between;
+
     }
     
     

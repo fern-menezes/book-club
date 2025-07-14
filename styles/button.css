@@ -8,3 +8,33 @@
     font: var(--text-title);
     cursor: pointer;
 }
+
+header button{
+    position: relative;
+    font: var(--button);
+    width: 6rem;
+    margin-top: 0.75rem;
+    overflow: hidden;
+    z-index: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.6);
+        opacity: 0;
+        width: 130%;
+        height: 200%;
+        background-color: var(--pink-base);
+        transition: transform 0.5s ease-out;
+        border-radius: 5rem;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 100;
+    }
+}
+

@@ -78,6 +78,11 @@ header{
     margin: 0 auto;
     padding: 3.5rem 10rem;
 
+    & a{
+        font: var(--button);
+        color: var(--text-body);
+    }
+
 }
 
 main{
@@ -86,4 +91,10 @@ main{
     gap: 6rem;
     max-width: 70rem;
     margin: 0 auto;
+
+    margin-bottom: 18rem;
+}
+
+a{
+    text-decoration: none;
 }
