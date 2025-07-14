@@ -1,0 +1,10 @@
+.btn{
+    background-color: var(--pink-dark);
+    color: var(--text-title);
+    border: none;
+    border-radius: 0.5rem;
+
+    height: 2.5rem;
+    font: var(--text-title);
+    cursor: pointer;
+}

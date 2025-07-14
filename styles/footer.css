@@ -1,0 +1,14 @@
+footer {
+    background: url(../assets/book-trace-background.png) top / contain  no-repeat;
+    background-size: 100%;
+    font-family: var(--font-family);
+
+
+    & .footer-content{
+        max-width: 70rem;
+        margin: 0 auto;
+
+    }
+    
+    
+}

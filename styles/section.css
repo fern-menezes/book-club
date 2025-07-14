@@ -1,0 +1,358 @@
+.page-title{
+    max-width: 70rem;
+    margin: 0 auto;
+    margin-bottom: 30rem;
+    padding: 3.5rem 10rem 1rem 10rem;
+
+    & h1{
+        font: var(--title-lg);
+        color: var(--text-title);
+        text-align: center;
+    }
+    & p{
+        margin-top: 2rem;
+        font: var(--body-lg);
+        color: var(--text-body);
+        text-align: center;
+    }
+}
+
+.headline{
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-bottom: 5rem;
+
+    & img {
+        width: 5.5rem;
+    }
+
+    & p{
+        font: var(--subtitle);
+        color: var(--text-body);
+
+        & span{
+            color: var(--blue-light);
+        }
+    }
+
+    & .icons-headline{
+        display: flex;
+        justify-content: space-between;
+
+        & img:first-child {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.book{
+    margin-top: 14rem;
+    text-align: center;
+
+    margin-bottom: 17rem;
+
+    & .book-headline{
+        font: var(--title-sm);
+        color: var(--text-title);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    & p{
+        color: var(--text-body);
+        font: var(--body-md);
+        margin-top: 0.5rem;
+    }
+
+    & .book-cover img{
+        width: 467px;
+        height: 617px;
+
+        img::before {
+            content: '';
+        }
+    }
+}
+
+.prices{
+    margin-top: 12rem;
+    text-align: center;
+
+    & h3:first-child{
+        color: var(--text-title);
+        font: var(--title-sm);
+        margin-bottom: 3.5rem;
+    }
+
+
+    & .cards{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        color: var(--text-body);
+
+        &:has(.mensal:hover) .semestral,
+        :has(.anual:hover) .semestral {
+            background-color: var(--shape-base);
+        }
+
+        & .mensal{
+            background-color: var(--shape-base);
+            border: 1px solid var(--shape-stroke);
+            border-radius: 1.5rem;
+            padding: 2rem 2rem 1.75rem 2rem;
+
+            width: 18rem;
+            text-align: left;
+            rotate: -8deg;
+
+            transition: 0.3s ease-in-out;
+            margin-bottom: 1px;
+
+            &:hover{
+                background-color: var(--shape-hover);
+                box-shadow: 0px 0px 80px var(--blue-low);
+                z-index: 2;
+                margin-bottom: 10px;
+            }
+
+            & h4{
+                color: var(--blue-light);
+                font: var(--title-sx);
+                font-weight: 700;
+                text-align: left;
+
+                margin-bottom: 1.5rem;
+            }
+
+            & h3{
+                font: var(--title-md);
+                color: var(--text-title);
+
+                & small{
+                    font: var(--title-xs);
+                    color: var(--text-title);
+                }
+            }
+            
+            & span {
+                font: var(--body-sm);
+                color: var(text-label);
+            }
+
+            
+            & button {
+                position: relative;
+                background-color: var(--blue-dark);
+                color: white;
+                font: var(--button);
+                width: 100%;
+                margin-top: 0.75rem;
+                overflow: hidden;
+                z-index: 0;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0.6);
+                    opacity: 0;
+                    width: 130%;
+                    height: 200%;
+                    background-color: var(--blue-mid);
+                    transition: transform 0.5s ease-out;
+                    border-radius: 5rem;
+                    z-index: -1;
+                }
+
+                &:hover::before {
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 100;
+                }
+                }
+
+                
+
+            .mensal-info{
+                margin-top: 8rem;
+
+                img {
+                   width: 0.8rem; 
+                }
+
+                p {
+                    display: flex;
+                    gap: .5rem;
+                    margin-top:0.75rem ;
+                    font: var(--body-xs);
+                }
+            }
+        }
+        .bunny{
+            position: relative;
+            bottom: 0;
+            transition: 0.3s ease-in-out;
+
+            &:hover{
+                bottom: 0.5rem;
+            }
+            
+        }
+
+        .bunny .icon-bunny{
+            right: 90px;
+            bottom: 2.5rem;
+            position: relative;
+            z-index: 2;
+
+        }
+    
+        & .semestral{
+            background-color: var(--shape-hover);
+            border: 1px solid var(--shape-stroke);
+            border-radius: 1.5rem;
+            padding: 2rem 2rem 1.75rem 2rem;
+
+            width: 18rem;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+            bottom: 3rem;
+
+            &:hover{
+                background-color: var(--shape-hover);
+                box-shadow: 0px 0px 80px var(--blue-low);                
+            }            
+
+            & .tag {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1.5rem;
+                
+                & h4{
+                    color: var(--pink-light);
+                    font: var(--title-sx);
+                    font-weight: 700;
+                    text-align: left;
+                }
+                & p{
+                    background-color: var(--shape-stroke);
+                    border-radius: 2rem;
+                    padding: 0.5rem 1.25rem;
+                    font: var(--tag);
+                }
+                    
+            }
+
+            & h3{
+                font: var(--title-md);
+                color: var(--text-title);
+
+                & small{
+                    font: var(--title-xs);
+                    color: var(--text-title);
+                }
+            }
+            
+            & span {
+                font: var(--body-sm);
+                color: var(text-label);
+            }
+
+            & button{
+                background-color: var(--pink-dark);
+                width: 100%;
+                margin-top:0.75rem ;
+                font: var(--button);
+            }
+
+            .semestral-info{
+                margin-top: 5rem;
+
+                img {
+                   width: 0.8rem; 
+                }
+
+                p {
+                    display: flex;
+                    gap: .5rem;
+                    margin-top:0.75rem ;
+                    font: var(--body-xs);
+                }
+            }
+        }
+
+        & .anual{
+            background-color: var(--shape-base);
+            border: 1px solid var(--shape-stroke);
+            border-radius: 1.5rem;
+            padding: 2rem 2rem 1.75rem 2rem;
+
+            width: 18rem;
+            text-align: left;
+            rotate: 8deg;
+            transition: 0.3s ease-in-out;
+            margin-bottom: 1px;
+
+            &:hover{
+                background-color: var(--shape-hover);
+                box-shadow: 0px 0px 80px var(--blue-low);
+                z-index: 2;
+                margin-bottom: 10px;
+            }
+
+            & h4{
+                color: var(--blue-light);
+                font: var(--title-sx);
+                font-weight: 700;
+                text-align: left;
+
+                margin-bottom: 1.5rem;
+            }
+
+            & h3{
+                font: var(--title-md);
+                color: var(--text-title);
+
+                & small{
+                    font: var(--title-xs);
+                    color: var(--text-title);
+                }
+            }
+            
+            & span {
+                font: var(--body-sm);
+                color: var(text-label);
+            }
+
+            & button{
+                background-color: var(--blue-dark);
+                width: 100%;
+                margin-top:0.75rem ;
+                font: var(--button);
+            }
+
+            .anual-info{
+                margin-top: 5rem;
+
+                img {
+                   width: 0.8rem; 
+                }
+
+                p {
+                    display: flex;
+                    gap: .5rem;
+                    margin-top:0.75rem ;
+                    font: var(--body-xs);
+                }
+            }
+        }
+    }
+}
