@@ -175,7 +175,7 @@
                     transform: translate(-50%, -50%) scale(1);
                     opacity: 100;
                 }
-                }
+            }
 
                 
 
@@ -266,12 +266,36 @@
                 color: var(text-label);
             }
 
-            & button{
+             & button {
+                position: relative;
                 background-color: var(--pink-dark);
-                width: 100%;
-                margin-top:0.75rem ;
+                color: white;
                 font: var(--button);
-            }
+                width: 100%;
+                margin-top: 0.75rem;
+                overflow: hidden;
+                z-index: 0;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0.6);
+                    opacity: 0;
+                    width: 130%;
+                    height: 200%;
+                    background-color: var(--pink-base);
+                    transition: transform 0.5s ease-out;
+                    border-radius: 5rem;
+                    z-index: -1;
+                }
+
+                &:hover::before {
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 100;
+                }
+                }
 
             .semestral-info{
                 margin-top: 5rem;
@@ -332,12 +356,36 @@
                 color: var(text-label);
             }
 
-            & button{
+             & button {
+                position: relative;
                 background-color: var(--blue-dark);
-                width: 100%;
-                margin-top:0.75rem ;
+                color: white;
                 font: var(--button);
-            }
+                width: 100%;
+                margin-top: 0.75rem;
+                overflow: hidden;
+                z-index: 0;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0.6);
+                    opacity: 0;
+                    width: 130%;
+                    height: 200%;
+                    background-color: var(--blue-mid);
+                    transition: transform 0.5s ease-out;
+                    border-radius: 5rem;
+                    z-index: -1;
+                }
+
+                &:hover::before {
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 100;
+                }
+                }
 
             .anual-info{
                 margin-top: 5rem;
